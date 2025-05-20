@@ -134,3 +134,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# node_modules
+movies-service/src/node_modules/
+cinema-catalog-service/src/node_modules/
+
+# MongoDB data files
+movies-service/data/
+cinema-catalog-service/data/
+
+# tesj-jest
+movies-service/src/coverage/
+cinema-catalog-service/src/coverage/
