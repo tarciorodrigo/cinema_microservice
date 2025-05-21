@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "682dceac36858a95a1eeeff9"
+  },
+  "titulo": "Os Vingadores: Ultimato",
+  "sinopse": "Os heróis mais poderosos da Terra enfrentando o Thanos. De novo.",
+  "duracao": 181,
+  "dataLancamento": {
+    "$date": "2019-04-25T00:00:00.000Z"
+  },
+  "imagem": "https://raw.githubusercontent.com/tarciorodrigo/cinema_microservice/refs/heads/main/images/Vingadores-Ultimato.jpeg",
+  "categorias": [
+    "Aventura",
+    "Ação"
+  ]
+},
+{
+  "_id": {
+    "$oid": "682dced836858a95a1eeeffa"
+  },
+  "titulo": "Os Vingadores: Guerra Infinita",
+  "sinopse": "Os heróis mais poderosos da Terra enfrentando o Thanos",
+  "duracao": 149,
+  "dataLancamento": {
+    "$date": "2018-04-26T00:00:00.000Z"
+  },
+  "imagem": "https://raw.githubusercontent.com/tarciorodrigo/cinema_microservice/refs/heads/main/images/Vingadores-Guerra_Infinita.jpeg",
+  "categorias": [
+    "Aventura",
+    "Ação"
+  ]
+},
+{
+  "_id": {
+    "$oid": "682dcee936858a95a1eeeffb"
+  },
+  "titulo": "Os Vingadores: Era de Ultron",
+  "sinopse": "Os heróis mais poderosos da Terra enfrentando o Ultron",
+  "duracao": 141,
+  "dataLancamento": {
+    "$date": "2015-04-23T00:00:00.000Z"
+  },
+  "imagem": "https://raw.githubusercontent.com/tarciorodrigo/cinema_microservice/refs/heads/main/images/vingadores-Era_de_Ultron.jpeg",
+  "categorias": [
+    "Aventura",
+    "Ação"
+  ]
+},
+{
+  "_id": {
+    "$oid": "682dcefb36858a95a1eeeffc"
+  },
+  "titulo": "Os Vingadores",
+  "sinopse": "Os heróis mais poderosos da Terra enfrentando o Loki",
+  "duracao": 143,
+  "dataLancamento": {
+    "$date": "2012-04-27T00:00:00.000Z"
+  },
+  "imagem": "https://raw.githubusercontent.com/tarciorodrigo/cinema_microservice/refs/heads/main/images/vingadores.jpeg",
+  "categorias": [
+    "Aventura",
+    "Ação"
+  ]
+},
+{
+  "_id": {
+    "$oid": "682dd00236858a95a1eeeffd"
+  },
+  "titulo": "Os Vingadores: Doomsday",
+  "sinopse": "Guerras Secretas- Prelúdio",
+  "duracao": 195,
+  "dataLancamento": {
+    "$date": "2025-05-21T00:00:00.000Z"
+  },
+  "imagem": "https://raw.githubusercontent.com/tarciorodrigo/cinema_microservice/refs/heads/main/images/vingadores-doomsday.jpeg",
+  "categorias": [
+    "Aventura",
+    "Ação"
+  ]
+}]
