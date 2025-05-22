@@ -1,49 +1,28 @@
-const express = require("express");
-const helmet = require("helmet");
-const morgan = require("morgan");
+const { test, expect } = require('@jest/globals');
+const request = require('supertest');
+const server = require('./server');
 
-let server = null;
+const apiMock = jest.fn((api, repository) => true);
 
-async function start() {
-  const app = express();
-  const port = process.env.PORT || 3000;
+test('Server Start', async () => {
+  const app = await server.start(apiMock);
+  expect(app).toBeTruthy();
+});
 
-  // Middleware
-  app.use(helmet());
-  app.use(morgan("dev"));
+test('Health Check', async () => {
+  process.env.PORT = 3001; 
+  const app = await server.start(apiMock);
+  const response = await request(app).get('/health');
+  expect(response.status).toEqual(200);
+});
 
-  app.use((error, req, next) => {
-    console.error(error);
-    res.sendstatus(500);
-  });
+test('Hello World', async () => {
+  const app = await server.start(apiMock);
+  const response = await request(app).get('/');
+  expect(response.status).toEqual(200);
+});
 
-  app.use(express.json());
-
-  // Routes
-  app.get("/", (req, res) => {
-    res.send("Hello World!");
-  });
-
-  app.get("/health", (req, res) => {
-    res.send(
-      `Service ${process.env.MS_NAME} running on http://localhost:${port}`
-    );
-  });
-
-  // Start server
-  server = app.listen(port, () => {
-    console.log(
-      `Service ${process.env.MS_NAME} running on http://localhost:${port}`
-    );
-  });
-}
-
-async function stop() {
-  if (server) await server.close();
-  return true;
-}
-
-module.exports = {
-  start,
-  stop,
-};
+test('Server Stop', async () => {
+  const isStopped = await server.stop();
+  expect(isStopped).toBeTruthy();
+});

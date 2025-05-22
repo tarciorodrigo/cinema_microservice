@@ -16,6 +16,7 @@ npm install --save-dev jest
 npx jest --init
 
 npm install morgan helmet
+npm install --save-dev supertest
 ```
 
 ## Install docker - Linux
